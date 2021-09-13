@@ -59,6 +59,9 @@ You will be running your tests in one terminal and debugging in the other. As yo
 Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
+
+Closure is the concept that a nested/child function has access to its own scope and its parent's scope, even after the parent function has been closed. This means that the nested function can take private variables from it's own scope and parent's scope, even if the function it is nested in has already been executed.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -80,8 +83,16 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+A closure is used when the anonymous function nested inside personalDice() takes the parameter from personalDice() to console log name in the template literal.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+The number that is console logged will always be between 0 and 5 and say in a string that "Dan has rolled a (random number between 0 and 5)". The logged number logged second could be different from the first.
+
 c. What is the lexical scope of `newRoll`? 
+
+newRoll can only be accessed inside the anonymous function inside personalDice().
 
 
 ### Task 3 - Stretch Goals
