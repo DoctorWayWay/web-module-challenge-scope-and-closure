@@ -28,11 +28,18 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
+
+  The variable count is only accessible from the function it is in, while the count variable in counter2 is set as a global variable.
   
   2. Which of the two uses a closure? How can you tell?
+
+  counter1 uses a closure for its nested function counter() to get the private variable "count" from its parent function counterMaker().
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+
+  If the variable count was going to be used over and over, then it would be better to use counter2, but if the variable count is only going to be used once and for this specific counter, then counter1 would be a better way to go. Global variables shouldn't be created unless they completely necessary.
+
 */
 
 // counter1 code
